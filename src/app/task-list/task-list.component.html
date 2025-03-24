@@ -1,0 +1,41 @@
+<div class="card">
+  <div class="card-header"> Task List
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button style="text-align: left;" data-toggle="tooltip" class="btn btn-Default" data-placement="top" title="Add">
+      <a routerLink="/taskcreate">Add new task</a>
+    </button>
+  </div>
+  <div class="card-body">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Task name</th>
+          <th>Category</th>
+          <th>Priority</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (task of tasklist; track task.id){
+        <tr>
+          <th>{{task.id}}.</th>
+          <td>{{task.name}}</td>
+          <td>{{task.categories}}</td>
+          <td>{{task.priority}}</td>
+          <td>{{task.status}}</td>
+          <td>
+            <button data-toggle="tooltip" class="btn btn-Default" data-placement="top" title="Detail">
+              <a routerLink="/taskview/{{task.id}}">View Task</a>
+            </button> | 
+            <button class="item" data-toggle="tooltip" class="btn btn-Default" data-placement="top" title="Edit">
+              <a routerLink="/taskedit/{{task.id}}">Edit Task</a>
+            </button>
+          </td>
+        </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+</div>

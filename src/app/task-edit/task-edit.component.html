@@ -1,0 +1,33 @@
+<a routerLink="/tasklist">Back to task list</a> <br />
+<p>task-edit by Id ({{edittask.id}}):</p>
+
+<div>
+    <tbody style="text-align: left;">
+        <tr>
+            <td>Id:</td>
+            <td><input type="text" #taskId disabled [value]="edittask.id"></td>
+        </tr><br />
+        <tr>
+            <td>Name:</td>
+            <td><input type="text" [value]="edittask.name" [(ngModel)]="edittask.name"></td>
+        </tr><br />
+        <tr>
+            <td>Category:</td>
+            <td><input type="text" [value]="edittask.categories" [(ngModel)]="edittask.categories"></td>
+        </tr><br />
+        <tr>
+            <td>Priority:</td>
+            <td><input type="text" [value]="edittask.priority" [(ngModel)]="edittask.priority"></td>
+        </tr><br />
+        <tr>
+            <td>Status:</td>
+            <td><input type="text" [value]="edittask.status" [(ngModel)]="edittask.status"></td>
+        </tr><br />
+        <tr>
+            <td colspan="2" style="text-align: center;">
+                <button class="item" data-toggle="tooltip" class="btn btn-Default" data-placement="top"
+                    (click)="EditTask(taskId.value)" title="Edit task">Edit Task</button>
+            </td>
+        </tr>
+    </tbody>
+</div>

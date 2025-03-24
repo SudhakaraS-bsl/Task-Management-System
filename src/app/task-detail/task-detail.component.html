@@ -1,0 +1,28 @@
+<a routerLink="/tasklist">Back to task list</a> <br />
+<p>task-detail by Id ({{viewtask.id}}):</p>
+
+<div>
+    <tbody style="text-align: left;">
+        <tr>
+            <td>Id:</td>
+            <td><input type="text" disabled [value]="viewtask.id"></td>
+        </tr><br />
+        <tr>
+            <td>Name:</td>
+            <td><input type="text" disabled [value]="viewtask.name"></td>
+        </tr><br />
+        <tr>
+            <td>Category:</td>
+            <td><input type="text" disabled [value]="viewtask.categories"></td>
+        </tr><br />
+        <tr>
+            <td>Priority:</td>
+            <td><input type="text" disabled [value]="viewtask.priority"></td>
+        </tr><br />
+        <tr>
+            <td>Status:</td>
+            <td><input type="text" disabled [value]="viewtask.status"></td>
+        </tr><br />
+
+    </tbody>
+</div>

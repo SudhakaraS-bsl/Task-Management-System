@@ -1,0 +1,33 @@
+<a routerLink="/tasklist">Back to task list</a> <br />
+<p>task-create:</p>
+<div>
+    <tbody style="text-align: left;">
+        <tr>
+            <td>Id:</td>
+            <td><input type="text" disabled [value]="newtask.id"></td>
+        </tr><br />
+        <tr>
+            <td>Name:</td>
+            <td><input type="text"  [(ngModel)]="newtask.name"></td>
+        </tr><br />
+        <tr>
+            <td>Category:</td>
+            <td><input type="text" [(ngModel)]="newtask.categories"></td>
+        </tr><br />
+        <tr>
+            <td>Priority:</td>
+            <td><input type="text" [(ngModel)]="newtask.priority"></td>
+        </tr><br />
+        <tr>
+            <td>Status:</td>
+            <td><input type="text" [(ngModel)]="newtask.status"></td>
+        </tr><br />
+        <tr>
+            <td colspan="2" style="text-align: center;">
+                    <button class="item" data-toggle="tooltip" class="btn btn-Default" data-placement="top"
+                    (click)="AddNewTask()" 
+                    title="Add new task">Add Task</button>
+            </td>
+        </tr>
+    </tbody>
+</div>
